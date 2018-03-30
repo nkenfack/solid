@@ -2,29 +2,36 @@ package exercise.srp;
 
 public class Post {
 
-    private final String author;
+    private final String author ;
     private final String title;
     private final String body;
 
-    public Post(
-            String author,
-            String title,
-            String body) {
+    public Post(){
+
+        author = null;
+        title =null;
+        body = null;
+    }
+    public Post(String author, String title, String body) {
         this.author = author;
         this.title = title;
         this.body = body;
     }
 
     public String getBody() {
-        return body;
+        return this.body;
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public String getAuthor() {
-        return author;
+        return this.author;
+    }
+
+    public String printAll(){
+        return "[ autore :"+this.getAuthor() + " Contenuto :" + this.getBody() +" tiltolo :" +this.getTitle() +"]" ;
     }
 
 
